@@ -1,0 +1,42 @@
+theme = 'hugo-theme-relearn'
+baseURL = 'https://github.com/qukato/'
+languageCode = 'zh-CN'
+title = 'baka个人杂记'
+defaultContentLanguage = 'zh'
+showVisitedLinks = true
+[outputs]
+  home = ['html', 'rss', 'print', 'markdown' ]
+  page = ['html', 'rss', 'print', 'markdown']
+  section = ['html', 'rss', 'print', 'markdown']
+
+[params]
+themeVariant = [
+	{ identifier = 'relearn-auto',  name = 'Relearn Light/Dark', auto = [] },
+	{ identifier = 'relearn-light'  },
+	{ identifier = 'relearn-dark'   },
+	{ identifier = 'relearn-bright' },
+	{ identifier = 'zen-auto',      name = 'Zen Light/Dark', auto = [ 'zen-light', 'zen-dark' ] },
+	{ identifier = 'zen-light'      },
+	{ identifier = 'zen-dark'       },
+	{ identifier = 'retro-auto',    name = 'Retro Learn/Neon', auto = [ 'learn', 'neon' ] },
+	{ identifier = 'neon'           },
+	{ identifier = 'learn'          },
+	{ identifier = 'blue'           },
+	{ identifier = 'green'          },
+	{ identifier = 'red'            }
+]
+[params.author]
+    email = 'hh-bu-gao-su-ni@163.com'
+    name = 'qukato'
+[languages]
+  [languages.en]
+    languageCode = 'en'
+    languageName = 'English'
+    title = 'My Website'
+    weight = 2
+
+  [languages.zh]
+    languageCode = 'zh'
+    languageName = 'chinese'
+    title = 'baka个人杂记'
+    weight = 1
