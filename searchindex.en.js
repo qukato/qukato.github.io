@@ -1,34 +1,26 @@
 var relearn_searchindex = [
   {
-    "breadcrumb": "",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "My New Hugo Site",
-    "uri": "/index.html"
-  },
-  {
-    "breadcrumb": "My New Hugo Site",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Posts",
-    "uri": "/posts/index.html"
-  },
-  {
-    "breadcrumb": "My New Hugo Site",
+    "breadcrumb": "My Website",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Categories",
-    "uri": "/categories/index.html"
+    "uri": "/en/categories/index.html"
   },
   {
-    "breadcrumb": "My New Hugo Site",
+    "breadcrumb": "",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "My Website",
+    "uri": "/en/index.html"
+  },
+  {
+    "breadcrumb": "My Website",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Tags",
-    "uri": "/tags/index.html"
+    "uri": "/en/tags/index.html"
   }
 ]
