@@ -1,2 +1,0 @@
-# qukato.github.io
-blogweb
