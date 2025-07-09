@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>图像 | 个人杂记</title>
+    <link>https://qukato.github.io/hugo/hugo-code-images/index.html</link>
+    <description>图像资源 要处理图像，您必须以页面资源、全局资源或远程资源的形式访问文件。&#xA;页面资源 页面资源是页面束（page bundle）中的文件。页面束是一个具有根目录下的 index.md 或 _index.md 文件的目录。&#xA;content/ └── posts/ └── post-1/ &lt;-- 页面束 ├── index.md └── sunset.jpg &lt;-- 页面资源 要以页面资源的形式访问图像：&#xA;{{ $image := .Resources.Get &#34;sunset.jpg&#34; }} 全局资源 全局资源是位于 assets 目录中或装载到 assets 目录中任意目录中的文件。&#xA;assets/ └── images/ └── sunset.jpg &lt;-- 全局资源 要以全局资源的形式访问图像：&#xA;{{ $image := resources.Get &#34;images/sunset.jpg&#34; }} 远程资源 远程资源是可通过 HTTP 或 HTTPS 访问的远程服务器上的文件。要以远程资源的形式访问图像：&#xA;{{ $image := resources.GetRemote &#34;https://gohugo.io/img/hugo-logo.png&#34; }} 图像渲染 一旦您访问了页面资源或全局资源中的图像，可以在模板中使用 Permalink、RelPermalink、Width 和 Height 属性来渲染图像。&#xA;示例 1：如果未找到资源，则抛出错误。&#xA;{{ $image := .Resources.GetMatch &#34;sunset.jpg&#34; }} &lt;img src=&#34;{{ $image.RelPermalink }}&#34; width=&#34;{{ $image.Width }}&#34; height=&#34;{{ $image.Height }}&#34;&gt; 示例 2：如果未找到资源，则跳过图像渲染。&#xA;{{ $image := .Resources.GetMatch &#34;sunset.jpg&#34; }} {{ with $image }} &lt;img src=&#34;{{ .RelPermalink }}&#34; width=&#34;{{ .Width }}&#34; height=&#34;{{ .Height }}&#34;&gt; {{ end }} 示例 3：另一种简洁的方式，如果未找到资源，则跳过图像渲染。</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="https://qukato.github.io/hugo/hugo-code-images/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

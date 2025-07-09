@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>md使用 | 个人杂记</title>
+    <link>https://qukato.github.io/md/use/index.html</link>
+    <description>1. 标题 # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题 2. 段落和换行 段落之间用空行分隔。 在行尾添加两个或更多空格可以强制换行。 这是一个段落。 这是同一段落的下一行。 这是另一个段落。 3. 强调 加粗：使用 ** 或 __ 包裹文本。 斜体：使用 * 或 _ 包裹文本。 删除线：使用 ~~ 包裹文本。 这是一个 **加粗** 的文本。 这是一个 *斜体* 的文本。 这是一个 ~~删除线~~ 的文本。 4. 列表 无序列表：使用 -、* 或 + 开始每一项。 有序列表：使用数字加点开始每一项。 无序列表： - 项目一 * 项目二 + 项目三 有序列表： 1. 第一项 2. 第二项 3. 第三项 5. 链接 [链接文本](http://example.com &#34;可选的标题&#34;) 6. 图片 ![图片描述](http://example.com/image.jpg &#34;可选的标题&#34;) 7. 引用 &gt; 这是一个引用。 &gt; 它可以包含多行。 8. 代码 行内代码：使用单个反引号包裹代码。 代码块：使用三个反引号包裹代码块，可以指定语言以启用语法高亮。 这是一个行内代码示例：`console.log(&#39;Hello, world!&#39;);` 代码块示例： ```javascript function hello() { console.log(&#39;Hello, world!&#39;); } #### **9. 表格** ```markdown | 表头1 | 表头2 | 表头3 | |-------|-------|-------| | 单元格1 | 单元格2 | 单元格3 | | 单元格4 | 单元格5 | 单元格6 | 10. 分隔线 复制</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="https://qukato.github.io/md/use/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

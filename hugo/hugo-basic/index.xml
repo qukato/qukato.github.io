@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo目录结构 | 个人杂记</title>
+    <link>https://qukato.github.io/hugo/hugo-basic/index.html</link>
+    <description>目录 每个子目录都贡献于站点的内容、结构、行为或呈现。&#xA;archetypes&#xA;archetypes 目录包含用于新内容的模板。详见 详情.&#xA;assets&#xA;assets 目录包含通常通过资源管道传递的全局资源。包括图片、CSS、Sass、JavaScript 和 TypeScript 等资源。详见 详情.&#xA;config&#xA;config 目录包含站点配置，可能分为多个子目录和文件。对于配置较少或不需要在不同环境中以不同方式运行的项目，项目根目录中的单个 hugo.toml 配置文件就足够了。详见 详情。&#xA;content&#xA;content 目录包含组成站点内容的标记文件（通常是 markdown）和页面资源。详见 详情.&#xA;data&#xA;data 目录包含用于增强内容、配置、本地化和导航的数据文件（JSON、TOML、YAML 或 XML）。详见 详情.&#xA;i18n&#xA;i18n 目录包含多语言站点的翻译表。详见 详情.&#xA;layouts&#xA;layouts 目录包含将内容、数据和资源转换为完整网站的模板。详见 详情.&#xA;public&#xA;public 目录包含发布的网站，在运行 hugo 命令时生成。Hugo 根据需要重建此目录及其内容。详见 详情.&#xA;resources&#xA;resources 目录包含 Hugo 资源管道的缓存输出，在运行 hugo 或 hugo server 命令时生成。默认情况下，此缓存目录包括 CSS 和图片。Hugo 根据需要重建此目录及其内容。&#xA;static&#xA;static 目录包含在构建站点时将复制到 public 目录的文件，例如 favicon.ico、robots.txt 和用于验证站点拥有权的文件。在引入 页面包 和 资源管道 之前，static 目录也用于存放图片、CSS 和 JavaScript 等资源。详见 详情.&#xA;themes&#xA;themes 目录包含一个或多个主题，每个主题位于自己的子目录中。&#xA;联合文件系统 Hugo 创建了一个联合文件系统，允许将两个或多个目录挂载到同一位置。例如，假设您的主目录包含一个 Hugo 项目的目录，另一个目录包含共享内容：</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="https://qukato.github.io/hugo/hugo-basic/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

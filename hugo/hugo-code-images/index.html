@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.148.0">
+    <meta name="generator" content="Relearn 8.0.0">
+    <meta name="description" content="图像资源 要处理图像，您必须以页面资源、全局资源或远程资源的形式访问文件。
+页面资源 页面资源是页面束（page bundle）中的文件。页面束是一个具有根目录下的 index.md 或 _index.md 文件的目录。
+content/ └── posts/ └── post-1/ &lt;-- 页面束 ├── index.md └── sunset.jpg &lt;-- 页面资源 要以页面资源的形式访问图像：
+{{ $image := .Resources.Get &#34;sunset.jpg&#34; }} 全局资源 全局资源是位于 assets 目录中或装载到 assets 目录中任意目录中的文件。
+assets/ └── images/ └── sunset.jpg &lt;-- 全局资源 要以全局资源的形式访问图像：
+{{ $image := resources.Get &#34;images/sunset.jpg&#34; }} 远程资源 远程资源是可通过 HTTP 或 HTTPS 访问的远程服务器上的文件。要以远程资源的形式访问图像：
+{{ $image := resources.GetRemote &#34;https://gohugo.io/img/hugo-logo.png&#34; }} 图像渲染 一旦您访问了页面资源或全局资源中的图像，可以在模板中使用 Permalink、RelPermalink、Width 和 Height 属性来渲染图像。
+示例 1：如果未找到资源，则抛出错误。
+{{ $image := .Resources.GetMatch &#34;sunset.jpg&#34; }} &lt;img src=&#34;{{ $image.RelPermalink }}&#34; width=&#34;{{ $image.Width }}&#34; height=&#34;{{ $image.Height }}&#34;&gt; 示例 2：如果未找到资源，则跳过图像渲染。
+{{ $image := .Resources.GetMatch &#34;sunset.jpg&#34; }} {{ with $image }} &lt;img src=&#34;{{ .RelPermalink }}&#34; width=&#34;{{ .Width }}&#34; height=&#34;{{ .Height }}&#34;&gt; {{ end }} 示例 3：另一种简洁的方式，如果未找到资源，则跳过图像渲染。">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="图像 | 个人杂记">
+    <meta name="twitter:description" content="图像资源 要处理图像，您必须以页面资源、全局资源或远程资源的形式访问文件。
+页面资源 页面资源是页面束（page bundle）中的文件。页面束是一个具有根目录下的 index.md 或 _index.md 文件的目录。
+content/ └── posts/ └── post-1/ &lt;-- 页面束 ├── index.md └── sunset.jpg &lt;-- 页面资源 要以页面资源的形式访问图像：
+{{ $image := .Resources.Get &#34;sunset.jpg&#34; }} 全局资源 全局资源是位于 assets 目录中或装载到 assets 目录中任意目录中的文件。
+assets/ └── images/ └── sunset.jpg &lt;-- 全局资源 要以全局资源的形式访问图像：
+{{ $image := resources.Get &#34;images/sunset.jpg&#34; }} 远程资源 远程资源是可通过 HTTP 或 HTTPS 访问的远程服务器上的文件。要以远程资源的形式访问图像：
+{{ $image := resources.GetRemote &#34;https://gohugo.io/img/hugo-logo.png&#34; }} 图像渲染 一旦您访问了页面资源或全局资源中的图像，可以在模板中使用 Permalink、RelPermalink、Width 和 Height 属性来渲染图像。
+示例 1：如果未找到资源，则抛出错误。
+{{ $image := .Resources.GetMatch &#34;sunset.jpg&#34; }} &lt;img src=&#34;{{ $image.RelPermalink }}&#34; width=&#34;{{ $image.Width }}&#34; height=&#34;{{ $image.Height }}&#34;&gt; 示例 2：如果未找到资源，则跳过图像渲染。
+{{ $image := .Resources.GetMatch &#34;sunset.jpg&#34; }} {{ with $image }} &lt;img src=&#34;{{ .RelPermalink }}&#34; width=&#34;{{ .Width }}&#34; height=&#34;{{ .Height }}&#34;&gt; {{ end }} 示例 3：另一种简洁的方式，如果未找到资源，则跳过图像渲染。">
+    <meta property="og:url" content="https://qukato.github.io/hugo/hugo-code-images/index.html">
+    <meta property="og:site_name" content="个人杂记">
+    <meta property="og:title" content="图像 | 个人杂记">
+    <meta property="og:description" content="图像资源 要处理图像，您必须以页面资源、全局资源或远程资源的形式访问文件。
+页面资源 页面资源是页面束（page bundle）中的文件。页面束是一个具有根目录下的 index.md 或 _index.md 文件的目录。
+content/ └── posts/ └── post-1/ &lt;-- 页面束 ├── index.md └── sunset.jpg &lt;-- 页面资源 要以页面资源的形式访问图像：
+{{ $image := .Resources.Get &#34;sunset.jpg&#34; }} 全局资源 全局资源是位于 assets 目录中或装载到 assets 目录中任意目录中的文件。
+assets/ └── images/ └── sunset.jpg &lt;-- 全局资源 要以全局资源的形式访问图像：
+{{ $image := resources.Get &#34;images/sunset.jpg&#34; }} 远程资源 远程资源是可通过 HTTP 或 HTTPS 访问的远程服务器上的文件。要以远程资源的形式访问图像：
+{{ $image := resources.GetRemote &#34;https://gohugo.io/img/hugo-logo.png&#34; }} 图像渲染 一旦您访问了页面资源或全局资源中的图像，可以在模板中使用 Permalink、RelPermalink、Width 和 Height 属性来渲染图像。
+示例 1：如果未找到资源，则抛出错误。
+{{ $image := .Resources.GetMatch &#34;sunset.jpg&#34; }} &lt;img src=&#34;{{ $image.RelPermalink }}&#34; width=&#34;{{ $image.Width }}&#34; height=&#34;{{ $image.Height }}&#34;&gt; 示例 2：如果未找到资源，则跳过图像渲染。
+{{ $image := .Resources.GetMatch &#34;sunset.jpg&#34; }} {{ with $image }} &lt;img src=&#34;{{ .RelPermalink }}&#34; width=&#34;{{ .Width }}&#34; height=&#34;{{ .Height }}&#34;&gt; {{ end }} 示例 3：另一种简洁的方式，如果未找到资源，则跳过图像渲染。">
+    <meta property="og:locale" content="zh_cn">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Hugoes">
+    <meta itemprop="name" content="图像 | 个人杂记">
+    <meta itemprop="description" content="图像资源 要处理图像，您必须以页面资源、全局资源或远程资源的形式访问文件。
+页面资源 页面资源是页面束（page bundle）中的文件。页面束是一个具有根目录下的 index.md 或 _index.md 文件的目录。
+content/ └── posts/ └── post-1/ &lt;-- 页面束 ├── index.md └── sunset.jpg &lt;-- 页面资源 要以页面资源的形式访问图像：
+{{ $image := .Resources.Get &#34;sunset.jpg&#34; }} 全局资源 全局资源是位于 assets 目录中或装载到 assets 目录中任意目录中的文件。
+assets/ └── images/ └── sunset.jpg &lt;-- 全局资源 要以全局资源的形式访问图像：
+{{ $image := resources.Get &#34;images/sunset.jpg&#34; }} 远程资源 远程资源是可通过 HTTP 或 HTTPS 访问的远程服务器上的文件。要以远程资源的形式访问图像：
+{{ $image := resources.GetRemote &#34;https://gohugo.io/img/hugo-logo.png&#34; }} 图像渲染 一旦您访问了页面资源或全局资源中的图像，可以在模板中使用 Permalink、RelPermalink、Width 和 Height 属性来渲染图像。
+示例 1：如果未找到资源，则抛出错误。
+{{ $image := .Resources.GetMatch &#34;sunset.jpg&#34; }} &lt;img src=&#34;{{ $image.RelPermalink }}&#34; width=&#34;{{ $image.Width }}&#34; height=&#34;{{ $image.Height }}&#34;&gt; 示例 2：如果未找到资源，则跳过图像渲染。
+{{ $image := .Resources.GetMatch &#34;sunset.jpg&#34; }} {{ with $image }} &lt;img src=&#34;{{ .RelPermalink }}&#34; width=&#34;{{ .Width }}&#34; height=&#34;{{ .Height }}&#34;&gt; {{ end }} 示例 3：另一种简洁的方式，如果未找到资源，则跳过图像渲染。">
+    <meta itemprop="wordCount" content="218">
+    <title>图像 | 个人杂记</title>
+    <link href="/hugo/hugo-code-images/index.xml" rel="alternate" type="application/rss+xml" title="图像 | 个人杂记">
+    <link href="/hugo/hugo-code-images/index.md" rel="alternate" type="text/markdown" title="图像 | 个人杂记">
+    <link href="/hugo/hugo-code-images/index.source.md" rel="alternate" type="text/markdown" title="图像 | 个人杂记">
+    <link href="/hugo/hugo-code-images/index.print.html" rel="alternate" type="text/html" title="图像 | 个人杂记">
+    <link href="/css/auto-complete/auto-complete.min.css?1752035216" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1752035216" defer></script>
+    <script src="/js/search-lunr.min.js?1752035216" defer></script>
+    <script src="/js/search.min.js?1752035216" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.zh-cn.js?1752035216";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1752035216" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1752035216" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1752035216" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1752035216" defer></script>
+    <script src="/js/lunr/lunr.zh.min.js?1752035216" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en', 'zh'];
+    </script>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1752035216" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1752035216" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1752035216" rel="stylesheet">
+    <link href="/css/theme.min.css?1752035216" rel="stylesheet">
+    <link href="/css/format-html.min.css?1752035216" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/hugo\/hugo-code-images\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='https:\/\/qukato.github.io';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+      // variant stuff
+      window.relearn.themevariants = [ 'relearn-light', 'relearn-dark' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/hugo/hugo-code-images/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="目录 (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#图像资源">图像资源</a>
+      <ul>
+        <li><a href="#页面资源">页面资源</a></li>
+        <li><a href="#全局资源">全局资源</a></li>
+        <li><a href="#远程资源">远程资源</a></li>
+      </ul>
+    </li>
+    <li><a href="#图像渲染">图像渲染</a>
+      <ul>
+        <li><a href="#figure"><code>figure</code></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">个人杂记</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo/index.html"><span itemprop="name">Hugoes</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">图像</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-source" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/hugo/hugo-code-images/index.source.md" title="显示源代码"><i class="fa-fw fas fa-code"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-markdown" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/hugo/hugo-code-images/index.md" title="显示 Markdown"><i class="fa-fw fab fa-markdown"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/hugo/hugo-code-images/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/hugo/hugo-%E5%9B%BE%E8%A1%A8/index.html" title="hugo图表 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/md/index.html" title="Mds (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable chapter" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="chapter narrow">
+  <header class="headline">
+  </header>
+<div class="article-subheading">第4章</div>
+
+<h1 id="图像">图像</h1>
+
+<h2 id="图像资源">图像资源</h2>
+<p>要处理图像，您必须以页面资源、全局资源或远程资源的形式访问文件。</p>
+<h3 id="页面资源">页面资源</h3>
+<p>页面资源是页面束（page bundle）中的文件。页面束是一个具有根目录下的 <code>index.md</code> 或 <code>_index.md</code> 文件的目录。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>content/
+</span></span><span style="display:flex;"><span>└── posts/
+</span></span><span style="display:flex;"><span>    └── post-1/           &lt;-- 页面束
+</span></span><span style="display:flex;"><span>        ├── index.md
+</span></span><span style="display:flex;"><span>        └── sunset.jpg    &lt;-- 页面资源</span></span></code></pre></div>
+<p>要以页面资源的形式访问图像：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">$image</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">.Resources.Get</span> <span style="color:#e6db74">&#34;sunset.jpg&#34;</span> <span style="color:#75715e">}}</span></span></span></code></pre></div>
+<h3 id="全局资源">全局资源</h3>
+<p>全局资源是位于 <code>assets</code> 目录中或装载到 <code>assets</code> 目录中任意目录中的文件。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>assets/
+</span></span><span style="display:flex;"><span>└── images/
+</span></span><span style="display:flex;"><span>    └── sunset.jpg    &lt;-- 全局资源</span></span></code></pre></div>
+<p>要以全局资源的形式访问图像：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">$image</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">resources</span><span style="color:#a6e22e">.Get</span> <span style="color:#e6db74">&#34;images/sunset.jpg&#34;</span> <span style="color:#75715e">}}</span></span></span></code></pre></div>
+<h3 id="远程资源">远程资源</h3>
+<p>远程资源是可通过 HTTP 或 HTTPS 访问的远程服务器上的文件。要以远程资源的形式访问图像：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">$image</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">resources</span><span style="color:#a6e22e">.GetRemote</span> <span style="color:#e6db74">&#34;https://gohugo.io/img/hugo-logo.png&#34;</span> <span style="color:#75715e">}}</span></span></span></code></pre></div>
+<h2 id="图像渲染">图像渲染</h2>
+<p>一旦您访问了页面资源或全局资源中的图像，可以在模板中使用 <code>Permalink</code>、<code>RelPermalink</code>、<code>Width</code> 和 <code>Height</code> 属性来渲染图像。</p>
+<p>示例 1：如果未找到资源，则抛出错误。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">$image</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">.Resources.GetMatch</span> <span style="color:#e6db74">&#34;sunset.jpg&#34;</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">$image</span><span style="color:#a6e22e">.RelPermalink</span> <span style="color:#75715e">}}</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">$image</span><span style="color:#a6e22e">.Width</span> <span style="color:#75715e">}}</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">$image</span><span style="color:#a6e22e">.Height</span> <span style="color:#75715e">}}</span><span style="color:#e6db74">&#34;</span>&gt;</span></span></code></pre></div>
+<p>示例 2：如果未找到资源，则跳过图像渲染。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">$image</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">.Resources.GetMatch</span> <span style="color:#e6db74">&#34;sunset.jpg&#34;</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#66d9ef">with</span> <span style="color:#a6e22e">$image</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">.RelPermalink</span> <span style="color:#75715e">}}</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">.Width</span> <span style="color:#75715e">}}</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">.Height</span> <span style="color:#75715e">}}</span><span style="color:#e6db74">&#34;</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">}}</span></span></span></code></pre></div>
+<p>示例 3：另一种简洁的方式，如果未找到资源，则跳过图像渲染。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#66d9ef">with</span> <span style="color:#a6e22e">.Resources.GetMatch</span> <span style="color:#e6db74">&#34;sunset.jpg&#34;</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">.RelPermalink</span> <span style="color:#75715e">}}</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">.Width</span> <span style="color:#75715e">}}</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">.Height</span> <span style="color:#75715e">}}</span><span style="color:#e6db74">&#34;</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">}}</span></span></span></code></pre></div>
+<p>示例 4：如果访问远程资源时遇到问题，则跳过渲染。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">$u</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;https://gohugo.io/img/hugo-logo.png&#34;</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#66d9ef">with</span> <span style="color:#a6e22e">resources</span><span style="color:#a6e22e">.GetRemote</span> <span style="color:#a6e22e">$u</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">{{</span> <span style="color:#66d9ef">with</span> <span style="color:#a6e22e">.Err</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">{{</span> <span style="color:#a6e22e">errorf</span> <span style="color:#e6db74">&#34;%s&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">{{</span> <span style="color:#66d9ef">else</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">.RelPermalink</span> <span style="color:#75715e">}}</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">.Width</span> <span style="color:#75715e">}}</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">.Height</span> <span style="color:#75715e">}}</span><span style="color:#e6db74">&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">{{</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#66d9ef">else</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">{{</span> <span style="color:#a6e22e">errorf</span> <span style="color:#e6db74">&#34;Unable to get remote resource %q&#34;</span> <span style="color:#a6e22e">$u</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">}}</span></span></span></code></pre></div>
+<h3 id="figure"><code>figure</code></h3>
+<p><code>figure</code>是Markdown中图像语法的扩展，它没有提供更语义化的[HTML5 <code>&lt;figure&gt;</code> 元素][figureelement]的缩写。</p>
+<p><code>figure</code>短代码可以使用以下命名参数：</p>
+<ul>
+<li>
+<p>src</p>
+<p>要显示图像的URL。</p>
+</li>
+<li>
+<p>link</p>
+<p>如果图像需要添加超链接，则为目标的URL。</p>
+</li>
+<li>
+<p>target</p>
+<p>如果设置了<code>link</code>参数，则为可选的<code>target</code>属性的URL。</p>
+</li>
+<li>
+<p>rel</p>
+<p>如果设置了<code>link</code>参数，则为可选的<code>rel</code>属性的URL。</p>
+</li>
+<li>
+<p>alt</p>
+<p>在图像无法显示时的替代文本。</p>
+</li>
+<li>
+<p>title</p>
+<p>图像标题。</p>
+</li>
+<li>
+<p>caption</p>
+<p>图像标题。<code>caption</code>值中的Markdown将被渲染。</p>
+</li>
+<li>
+<p>class</p>
+<p>HTML <code>figure</code>标签的<code>class</code>属性。</p>
+</li>
+<li>
+<p>height</p>
+<p>图像的<code>height</code>属性。</p>
+</li>
+<li>
+<p>width</p>
+<p>图像的<code>width</code>属性。</p>
+</li>
+<li>
+<p>loading</p>
+<p>图像的<code>loading</code>属性。</p>
+</li>
+<li>
+<p>attr</p>
+<p>图像属性文本。<code>attr</code>值中的Markdown将被渲染。</p>
+</li>
+<li>
+<p>attrlink</p>
+<p>如果属性文本需要超链接，请添加目标的URL。</p>
+</li>
+</ul>
+<h4 id="figure输入示例"><code>figure</code>输入示例</h4>
+<p>figure-input-example.md</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><figure><img src="elephant.jpg"><figcaption>
+      <h4>日落时的大象</h4>
+    </figcaption>
+</figure>
+</span></span></code></pre></div>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+          <a id="R-logo" class="R-default" href="/index.html">
+            <div class="logo-title">个人杂记</div>
+          </a>
+        </div>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="搜索 (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">搜索</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="搜索...">
+            <button class="search-clear" type="button" data-search-clear="" title="清除搜索"><i class="fas fa-times" title="清除搜索"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/index.html"><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/about/index.html"><a class="padding" href="/about/index.html">第一篇文章<i class="fa-fw fas fa-check read-icon"></i></a></li>
+            <li class="parent " data-nav-id="/hugo/index.html"><a class="padding" href="/hugo/index.html">Hugoes<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-deefdfb1bf287f4e1b98b48eb2a674a4" class="collapsible-menu">
+            <li class="" data-nav-id="/hugo/hugo/index.html"><a class="padding" href="/hugo/hugo/index.html">hugo<i class="fa-fw fas fa-check read-icon"></i></a></li>
+            <li class="" data-nav-id="/hugo/hugo-basic/index.html"><a class="padding" href="/hugo/hugo-basic/index.html">hugo目录结构<i class="fa-fw fas fa-check read-icon"></i></a></li>
+            <li class="" data-nav-id="/hugo/hugo-%E5%9B%BE%E8%A1%A8/index.html"><a class="padding" href="/hugo/hugo-%E5%9B%BE%E8%A1%A8/index.html">hugo图表<i class="fa-fw fas fa-check read-icon"></i></a></li>
+            <li class="active " data-nav-id="/hugo/hugo-code-images/index.html"><a class="padding" href="/hugo/hugo-code-images/index.html">图像<i class="fa-fw fas fa-check read-icon"></i></a></li></ul></li>
+            <li class="" data-nav-id="/md/index.html"><a class="padding" href="/md/index.html">Mds<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-356958daa34bfee934a293d95d9578df" class="collapsible-menu"></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+			<li class="R-languageswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-language"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-language">语言</label>
+                  <select id="R-select-language">
+                    <option id="R-select-language-zh-cn" value="zh-cn" data-url="/hugo/hugo-code-images/index.html" lang="zh-cn" selected data-selected>中文</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </li>
+            <li class="R-variantswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-paint-brush"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-variant">主题</label>
+                  <select id="R-select-variant">
+                    <option id="R-select-variant-relearn-light" value="relearn-light" selected>Relearn Light</option>
+                    <option id="R-select-variant-relearn-dark" value="relearn-dark">Relearn Dark</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <script>window.relearn.markVariant();</script>
+            </li>
+            <li class="R-historyclearer">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-history"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <button>清理历史记录</button>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/clipboard/clipboard.min.js?1752035216" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1752035216" defer></script>
+    <script src="/js/theme.min.js?1752035216" defer></script>
+  </body>
+</html>

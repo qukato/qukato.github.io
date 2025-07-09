@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.148.0">
+    <meta name="generator" content="Relearn 8.0.0">
+    <meta name="description" content="目录 每个子目录都贡献于站点的内容、结构、行为或呈现。
+archetypes
+archetypes 目录包含用于新内容的模板。详见 详情.
+assets
+assets 目录包含通常通过资源管道传递的全局资源。包括图片、CSS、Sass、JavaScript 和 TypeScript 等资源。详见 详情.
+config
+config 目录包含站点配置，可能分为多个子目录和文件。对于配置较少或不需要在不同环境中以不同方式运行的项目，项目根目录中的单个 hugo.toml 配置文件就足够了。详见 详情。
+content
+content 目录包含组成站点内容的标记文件（通常是 markdown）和页面资源。详见 详情.
+data
+data 目录包含用于增强内容、配置、本地化和导航的数据文件（JSON、TOML、YAML 或 XML）。详见 详情.
+i18n
+i18n 目录包含多语言站点的翻译表。详见 详情.
+layouts
+layouts 目录包含将内容、数据和资源转换为完整网站的模板。详见 详情.
+public
+public 目录包含发布的网站，在运行 hugo 命令时生成。Hugo 根据需要重建此目录及其内容。详见 详情.
+resources
+resources 目录包含 Hugo 资源管道的缓存输出，在运行 hugo 或 hugo server 命令时生成。默认情况下，此缓存目录包括 CSS 和图片。Hugo 根据需要重建此目录及其内容。
+static
+static 目录包含在构建站点时将复制到 public 目录的文件，例如 favicon.ico、robots.txt 和用于验证站点拥有权的文件。在引入 页面包 和 资源管道 之前，static 目录也用于存放图片、CSS 和 JavaScript 等资源。详见 详情.
+themes
+themes 目录包含一个或多个主题，每个主题位于自己的子目录中。
+联合文件系统 Hugo 创建了一个联合文件系统，允许将两个或多个目录挂载到同一位置。例如，假设您的主目录包含一个 Hugo 项目的目录，另一个目录包含共享内容：">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="hugo目录结构 | 个人杂记">
+    <meta name="twitter:description" content="目录 每个子目录都贡献于站点的内容、结构、行为或呈现。
+archetypes
+archetypes 目录包含用于新内容的模板。详见 详情.
+assets
+assets 目录包含通常通过资源管道传递的全局资源。包括图片、CSS、Sass、JavaScript 和 TypeScript 等资源。详见 详情.
+config
+config 目录包含站点配置，可能分为多个子目录和文件。对于配置较少或不需要在不同环境中以不同方式运行的项目，项目根目录中的单个 hugo.toml 配置文件就足够了。详见 详情。
+content
+content 目录包含组成站点内容的标记文件（通常是 markdown）和页面资源。详见 详情.
+data
+data 目录包含用于增强内容、配置、本地化和导航的数据文件（JSON、TOML、YAML 或 XML）。详见 详情.
+i18n
+i18n 目录包含多语言站点的翻译表。详见 详情.
+layouts
+layouts 目录包含将内容、数据和资源转换为完整网站的模板。详见 详情.
+public
+public 目录包含发布的网站，在运行 hugo 命令时生成。Hugo 根据需要重建此目录及其内容。详见 详情.
+resources
+resources 目录包含 Hugo 资源管道的缓存输出，在运行 hugo 或 hugo server 命令时生成。默认情况下，此缓存目录包括 CSS 和图片。Hugo 根据需要重建此目录及其内容。
+static
+static 目录包含在构建站点时将复制到 public 目录的文件，例如 favicon.ico、robots.txt 和用于验证站点拥有权的文件。在引入 页面包 和 资源管道 之前，static 目录也用于存放图片、CSS 和 JavaScript 等资源。详见 详情.
+themes
+themes 目录包含一个或多个主题，每个主题位于自己的子目录中。
+联合文件系统 Hugo 创建了一个联合文件系统，允许将两个或多个目录挂载到同一位置。例如，假设您的主目录包含一个 Hugo 项目的目录，另一个目录包含共享内容：">
+    <meta property="og:url" content="https://qukato.github.io/hugo/hugo-basic/index.html">
+    <meta property="og:site_name" content="个人杂记">
+    <meta property="og:title" content="hugo目录结构 | 个人杂记">
+    <meta property="og:description" content="目录 每个子目录都贡献于站点的内容、结构、行为或呈现。
+archetypes
+archetypes 目录包含用于新内容的模板。详见 详情.
+assets
+assets 目录包含通常通过资源管道传递的全局资源。包括图片、CSS、Sass、JavaScript 和 TypeScript 等资源。详见 详情.
+config
+config 目录包含站点配置，可能分为多个子目录和文件。对于配置较少或不需要在不同环境中以不同方式运行的项目，项目根目录中的单个 hugo.toml 配置文件就足够了。详见 详情。
+content
+content 目录包含组成站点内容的标记文件（通常是 markdown）和页面资源。详见 详情.
+data
+data 目录包含用于增强内容、配置、本地化和导航的数据文件（JSON、TOML、YAML 或 XML）。详见 详情.
+i18n
+i18n 目录包含多语言站点的翻译表。详见 详情.
+layouts
+layouts 目录包含将内容、数据和资源转换为完整网站的模板。详见 详情.
+public
+public 目录包含发布的网站，在运行 hugo 命令时生成。Hugo 根据需要重建此目录及其内容。详见 详情.
+resources
+resources 目录包含 Hugo 资源管道的缓存输出，在运行 hugo 或 hugo server 命令时生成。默认情况下，此缓存目录包括 CSS 和图片。Hugo 根据需要重建此目录及其内容。
+static
+static 目录包含在构建站点时将复制到 public 目录的文件，例如 favicon.ico、robots.txt 和用于验证站点拥有权的文件。在引入 页面包 和 资源管道 之前，static 目录也用于存放图片、CSS 和 JavaScript 等资源。详见 详情.
+themes
+themes 目录包含一个或多个主题，每个主题位于自己的子目录中。
+联合文件系统 Hugo 创建了一个联合文件系统，允许将两个或多个目录挂载到同一位置。例如，假设您的主目录包含一个 Hugo 项目的目录，另一个目录包含共享内容：">
+    <meta property="og:locale" content="zh_cn">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Hugoes">
+    <meta itemprop="name" content="hugo目录结构 | 个人杂记">
+    <meta itemprop="description" content="目录 每个子目录都贡献于站点的内容、结构、行为或呈现。
+archetypes
+archetypes 目录包含用于新内容的模板。详见 详情.
+assets
+assets 目录包含通常通过资源管道传递的全局资源。包括图片、CSS、Sass、JavaScript 和 TypeScript 等资源。详见 详情.
+config
+config 目录包含站点配置，可能分为多个子目录和文件。对于配置较少或不需要在不同环境中以不同方式运行的项目，项目根目录中的单个 hugo.toml 配置文件就足够了。详见 详情。
+content
+content 目录包含组成站点内容的标记文件（通常是 markdown）和页面资源。详见 详情.
+data
+data 目录包含用于增强内容、配置、本地化和导航的数据文件（JSON、TOML、YAML 或 XML）。详见 详情.
+i18n
+i18n 目录包含多语言站点的翻译表。详见 详情.
+layouts
+layouts 目录包含将内容、数据和资源转换为完整网站的模板。详见 详情.
+public
+public 目录包含发布的网站，在运行 hugo 命令时生成。Hugo 根据需要重建此目录及其内容。详见 详情.
+resources
+resources 目录包含 Hugo 资源管道的缓存输出，在运行 hugo 或 hugo server 命令时生成。默认情况下，此缓存目录包括 CSS 和图片。Hugo 根据需要重建此目录及其内容。
+static
+static 目录包含在构建站点时将复制到 public 目录的文件，例如 favicon.ico、robots.txt 和用于验证站点拥有权的文件。在引入 页面包 和 资源管道 之前，static 目录也用于存放图片、CSS 和 JavaScript 等资源。详见 详情.
+themes
+themes 目录包含一个或多个主题，每个主题位于自己的子目录中。
+联合文件系统 Hugo 创建了一个联合文件系统，允许将两个或多个目录挂载到同一位置。例如，假设您的主目录包含一个 Hugo 项目的目录，另一个目录包含共享内容：">
+    <meta itemprop="wordCount" content="200">
+    <title>hugo目录结构 | 个人杂记</title>
+    <link href="https://qukato.github.io/hugo/hugo-basic/index.html" rel="canonical" type="text/html" title="hugo目录结构 | 个人杂记">
+    <link href="/hugo/hugo-basic/index.xml" rel="alternate" type="application/rss+xml" title="hugo目录结构 | 个人杂记">
+    <link href="/hugo/hugo-basic/index.md" rel="alternate" type="text/markdown" title="hugo目录结构 | 个人杂记">
+    <link href="/hugo/hugo-basic/index.source.md" rel="alternate" type="text/markdown" title="hugo目录结构 | 个人杂记">
+    <link href="/css/auto-complete/auto-complete.min.css?1752035216" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1752035216" defer></script>
+    <script src="/js/search-lunr.min.js?1752035216" defer></script>
+    <script src="/js/search.min.js?1752035216" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.zh-cn.js?1752035216";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1752035216" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1752035216" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1752035216" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1752035216" defer></script>
+    <script src="/js/lunr/lunr.zh.min.js?1752035216" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en', 'zh'];
+    </script>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1752035216" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1752035216" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1752035216" rel="stylesheet">
+    <link href="/css/theme.min.css?1752035216" rel="stylesheet">
+    <link href="/css/format-print.min.css?1752035216" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/hugo\/hugo-basic\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='https:\/\/qukato.github.io';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+      // variant stuff
+      window.relearn.themevariants = [ 'relearn-light', 'relearn-dark' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support print" data-url="/hugo/hugo-basic/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="目录 (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#目录">目录</a></li>
+    <li><a href="#联合文件系统">联合文件系统</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">个人杂记</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo/index.html"><span itemprop="name">Hugoes</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">hugo目录结构</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-source" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/hugo/hugo-basic/index.source.md" title="显示源代码"><i class="fa-fw fas fa-code"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-markdown" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/hugo/hugo-basic/index.md" title="显示 Markdown"><i class="fa-fw fab fa-markdown"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/hugo/hugo-basic/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/hugo/hugo/index.html" title="hugo (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/hugo/hugo-%E5%9B%BE%E8%A1%A8/index.html" title="hugo图表 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable chapter" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="chapter narrow">
+  <header class="headline">
+  </header>
+<div class="article-subheading">第2章</div>
+
+<h1 id="hugo目录结构">hugo目录结构</h1>
+
+<h2 id="目录">目录</h2>
+<p>每个子目录都贡献于站点的内容、结构、行为或呈现。</p>
+<ul>
+<li>
+<p>archetypes</p>
+<p><code>archetypes</code> 目录包含用于新内容的模板。详见 <a href="https://hugo.opendocs.io/content-management/archetypes/" rel="external" target="_blank">详情</a>.</p>
+</li>
+<li>
+<p>assets</p>
+<p><code>assets</code> 目录包含通常通过资源管道传递的全局资源。包括图片、CSS、Sass、JavaScript 和 TypeScript 等资源。详见 <a href="https://hugo.opendocs.io/hugo-pipes/introduction/" rel="external" target="_blank">详情</a>.</p>
+</li>
+<li>
+<p>config</p>
+<p><code>config</code> 目录包含站点配置，可能分为多个子目录和文件。对于配置较少或不需要在不同环境中以不同方式运行的项目，项目根目录中的单个 <code>hugo.toml</code> 配置文件就足够了。详见 <a href="https://hugo.opendocs.io/getting-started/configuration/#configuration-directory" rel="external" target="_blank">详情</a>。</p>
+</li>
+<li>
+<p>content</p>
+<p><code>content</code> 目录包含组成站点内容的标记文件（通常是 markdown）和页面资源。详见 <a href="https://hugo.opendocs.io/content-management/organization/" rel="external" target="_blank">详情</a>.</p>
+</li>
+<li>
+<p>data</p>
+<p><code>data</code> 目录包含用于增强内容、配置、本地化和导航的数据文件（JSON、TOML、YAML 或 XML）。详见 <a href="https://hugo.opendocs.io/templates/data-templates/" rel="external" target="_blank">详情</a>.</p>
+</li>
+<li>
+<p>i18n</p>
+<p><code>i18n</code> 目录包含多语言站点的翻译表。详见 <a href="https://hugo.opendocs.io/content-management/multilingual/" rel="external" target="_blank">详情</a>.</p>
+</li>
+<li>
+<p>layouts</p>
+<p><code>layouts</code> 目录包含将内容、数据和资源转换为完整网站的模板。详见 <a href="https://hugo.opendocs.io/templates/" rel="external" target="_blank">详情</a>.</p>
+</li>
+<li>
+<p>public</p>
+<p><code>public</code> 目录包含发布的网站，在运行 <code>hugo</code> 命令时生成。Hugo 根据需要重建此目录及其内容。详见 <a href="https://hugo.opendocs.io/getting-started/usage/#build-your-site" rel="external" target="_blank">详情</a>.</p>
+</li>
+<li>
+<p>resources</p>
+<p><code>resources</code> 目录包含 Hugo 资源管道的缓存输出，在运行 <code>hugo</code> 或 <code>hugo server</code> 命令时生成。默认情况下，此缓存目录包括 CSS 和图片。Hugo 根据需要重建此目录及其内容。</p>
+</li>
+<li>
+<p>static</p>
+<p><code>static</code> 目录包含在构建站点时将复制到 public 目录的文件，例如 <code>favicon.ico</code>、<code>robots.txt</code> 和用于验证站点拥有权的文件。在引入 <a href="https://hugo.opendocs.io/getting-started/glossary/#page-bundle" rel="external" target="_blank">页面包</a> 和 <a href="https://hugo.opendocs.io/hugo-pipes/introduction/" rel="external" target="_blank">资源管道</a> 之前，<code>static</code> 目录也用于存放图片、CSS 和 JavaScript 等资源。详见 <a href="https://hugo.opendocs.io/content-management/static-files/" rel="external" target="_blank">详情</a>.</p>
+</li>
+<li>
+<p>themes</p>
+<p><code>themes</code> 目录包含一个或多个<a href="https://hugo.opendocs.io/getting-started/glossary/#theme" rel="external" target="_blank">主题</a>，每个主题位于自己的子目录中。</p>
+</li>
+</ul>
+<h2 id="联合文件系统">联合文件系统</h2>
+<p>Hugo 创建了一个联合文件系统，允许将两个或多个目录挂载到同一位置。例如，假设您的主目录包含一个 Hugo 项目的目录，另一个目录包含共享内容：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>home/
+</span></span><span style="display:flex;"><span>└── user/
+</span></span><span style="display:flex;"><span>    ├── my-site/            
+</span></span><span style="display:flex;"><span>    │   ├── content/
+</span></span><span style="display:flex;"><span>    │   │   ├── books/
+</span></span><span style="display:flex;"><span>    │   │   │   ├── _index.md
+</span></span><span style="display:flex;"><span>    │   │   │   ├── book-1.md
+</span></span><span style="display:flex;"><span>    │   │   │   └── book-2.md
+</span></span><span style="display:flex;"><span>    │   │   └── _index.md
+</span></span><span style="display:flex;"><span>    │   ├── themes/
+</span></span><span style="display:flex;"><span>    │   │   └── my-theme/
+</span></span><span style="display:flex;"><span>    │   └── hugo.toml
+</span></span><span style="display:flex;"><span>    └── shared-content/     
+</span></span><span style="display:flex;"><span>        └── films/
+</span></span><span style="display:flex;"><span>            ├── _index.md
+</span></span><span style="display:flex;"><span>            ├── film-1.md
+</span></span><span style="display:flex;"><span>            └── film-2.md</span></span></code></pre></div>
+<p>您可以使用挂载（mounts）在构建站点时包含共享内容。在站点配置中：</p>
+<p>hugo.</p>
+<p>yamltomljson</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">module</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">mounts</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">source</span>: <span style="color:#ae81ff">content</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">target</span>: <span style="color:#ae81ff">content</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">source</span>: <span style="color:#ae81ff">/home/user/shared-content</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">target</span>: <span style="color:#ae81ff">content</span></span></span></code></pre></div>
+<p>当您在一个目录上覆盖另一个目录时，您必须挂载这两个目录。</p>
+<p>如果您认为在项目目录中需要符号链接，请改用 Hugo 的联合文件系统。</p>
+<p>挂载后，联合文件系统的结构如下：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>home/
+</span></span><span style="display:flex;"><span>└── user/
+</span></span><span style="display:flex;"><span>    └── my-site/
+</span></span><span style="display:flex;"><span>        ├── content/
+</span></span><span style="display:flex;"><span>        │   ├── books/
+</span></span><span style="display:flex;"><span>        │   │   ├── _index.md
+</span></span><span style="display:flex;"><span>        │   │   ├── book-1.md
+</span></span><span style="display:flex;"><span>        │   │   └── book-2.md
+</span></span><span style="display:flex;"><span>        │   ├── films/
+</span></span><span style="display:flex;"><span>        │   │   ├── _index.md
+</span></span><span style="display:flex;"><span>        │   │   ├── film-1.md
+</span></span><span style="display:flex;"><span>        │   │   └── film-2.md
+</span></span><span style="display:flex;"><span>        │   └── _index.md
+</span></span><span style="display:flex;"><span>        ├── themes/
+</span></span><span style="display:flex;"><span>        │   └── my-theme/
+</span></span><span style="display:flex;"><span>        └── hugo.toml</span></span></code></pre></div>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/clipboard/clipboard.min.js?1752035216" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1752035216" defer></script>
+    <script src="/js/theme.min.js?1752035216" defer></script>
+  </body>
+</html>

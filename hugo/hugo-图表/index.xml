@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo图表 | 个人杂记</title>
+    <link>https://qukato.github.io/hugo/hugo-%E5%9B%BE%E8%A1%A8/index.html</link>
+    <description>GoAT 图表（Ascii） Hugo 原生支持 GoAT。这意味着下面的代码块：&#xA;Trees . . . .--- 1 .-- 1 / 1 / \ | | .---+ .-+ + / \ .---+---. .--+--. | &#39;--- 2 | &#39;-- 2 / \ 2 + + | | | | ---+ ---+ + / \ / \ .-+-. .-+-. .+. .+. | .--- 3 | .-- 3 \ / 3 / \ / \ | | | | | | | | &#39;---+ &#39;-+ + 1 2 3 4 1 2 3 4 1 2 3 4 &#39;--- 4 &#39;-- 4 \ 4 Overlaps</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="https://qukato.github.io/hugo/hugo-%E5%9B%BE%E8%A1%A8/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

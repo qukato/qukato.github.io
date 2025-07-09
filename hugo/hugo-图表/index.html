@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.148.0">
+    <meta name="generator" content="Relearn 8.0.0">
+    <meta name="description" content="GoAT 图表（Ascii） Hugo 原生支持 GoAT。这意味着下面的代码块：
+Trees . . . .--- 1 .-- 1 / 1 / \ | | .---&#43; .-&#43; &#43; / \ .---&#43;---. .--&#43;--. | &#39;--- 2 | &#39;-- 2 / \ 2 &#43; &#43; | | | | ---&#43; ---&#43; &#43; / \ / \ .-&#43;-. .-&#43;-. .&#43;. .&#43;. | .--- 3 | .-- 3 \ / 3 / \ / \ | | | | | | | | &#39;---&#43; &#39;-&#43; &#43; 1 2 3 4 1 2 3 4 1 2 3 4 &#39;--- 4 &#39;-- 4 \ 4 Overlaps">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="hugo图表 | 个人杂记">
+    <meta name="twitter:description" content="GoAT 图表（Ascii） Hugo 原生支持 GoAT。这意味着下面的代码块：
+Trees . . . .--- 1 .-- 1 / 1 / \ | | .---&#43; .-&#43; &#43; / \ .---&#43;---. .--&#43;--. | &#39;--- 2 | &#39;-- 2 / \ 2 &#43; &#43; | | | | ---&#43; ---&#43; &#43; / \ / \ .-&#43;-. .-&#43;-. .&#43;. .&#43;. | .--- 3 | .-- 3 \ / 3 / \ / \ | | | | | | | | &#39;---&#43; &#39;-&#43; &#43; 1 2 3 4 1 2 3 4 1 2 3 4 &#39;--- 4 &#39;-- 4 \ 4 Overlaps">
+    <meta property="og:url" content="https://qukato.github.io/hugo/hugo-%E5%9B%BE%E8%A1%A8/index.html">
+    <meta property="og:site_name" content="个人杂记">
+    <meta property="og:title" content="hugo图表 | 个人杂记">
+    <meta property="og:description" content="GoAT 图表（Ascii） Hugo 原生支持 GoAT。这意味着下面的代码块：
+Trees . . . .--- 1 .-- 1 / 1 / \ | | .---&#43; .-&#43; &#43; / \ .---&#43;---. .--&#43;--. | &#39;--- 2 | &#39;-- 2 / \ 2 &#43; &#43; | | | | ---&#43; ---&#43; &#43; / \ / \ .-&#43;-. .-&#43;-. .&#43;. .&#43;. | .--- 3 | .-- 3 \ / 3 / \ / \ | | | | | | | | &#39;---&#43; &#39;-&#43; &#43; 1 2 3 4 1 2 3 4 1 2 3 4 &#39;--- 4 &#39;-- 4 \ 4 Overlaps">
+    <meta property="og:locale" content="zh_cn">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Hugoes">
+    <meta itemprop="name" content="hugo图表 | 个人杂记">
+    <meta itemprop="description" content="GoAT 图表（Ascii） Hugo 原生支持 GoAT。这意味着下面的代码块：
+Trees . . . .--- 1 .-- 1 / 1 / \ | | .---&#43; .-&#43; &#43; / \ .---&#43;---. .--&#43;--. | &#39;--- 2 | &#39;-- 2 / \ 2 &#43; &#43; | | | | ---&#43; ---&#43; &#43; / \ / \ .-&#43;-. .-&#43;-. .&#43;. .&#43;. | .--- 3 | .-- 3 \ / 3 / \ / \ | | | | | | | | &#39;---&#43; &#39;-&#43; &#43; 1 2 3 4 1 2 3 4 1 2 3 4 &#39;--- 4 &#39;-- 4 \ 4 Overlaps">
+    <meta itemprop="wordCount" content="1103">
+    <title>hugo图表 | 个人杂记</title>
+    <link href="/hugo/hugo-%E5%9B%BE%E8%A1%A8/index.xml" rel="alternate" type="application/rss+xml" title="hugo图表 | 个人杂记">
+    <link href="/hugo/hugo-%E5%9B%BE%E8%A1%A8/index.md" rel="alternate" type="text/markdown" title="hugo图表 | 个人杂记">
+    <link href="/hugo/hugo-%E5%9B%BE%E8%A1%A8/index.source.md" rel="alternate" type="text/markdown" title="hugo图表 | 个人杂记">
+    <link href="/hugo/hugo-%E5%9B%BE%E8%A1%A8/index.print.html" rel="alternate" type="text/html" title="hugo图表 | 个人杂记">
+    <link href="/css/auto-complete/auto-complete.min.css?1752035216" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1752035216" defer></script>
+    <script src="/js/search-lunr.min.js?1752035216" defer></script>
+    <script src="/js/search.min.js?1752035216" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.zh-cn.js?1752035216";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1752035216" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1752035216" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1752035216" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1752035216" defer></script>
+    <script src="/js/lunr/lunr.zh.min.js?1752035216" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en', 'zh'];
+    </script>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1752035216" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1752035216" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1752035216" rel="stylesheet">
+    <link href="/css/theme.min.css?1752035216" rel="stylesheet">
+    <link href="/css/format-html.min.css?1752035216" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/hugo\/hugo-%E5%9B%BE%E8%A1%A8\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='https:\/\/qukato.github.io';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+      // variant stuff
+      window.relearn.themevariants = [ 'relearn-light', 'relearn-dark' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/hugo/hugo-%E5%9B%BE%E8%A1%A8/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="目录 (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#goat-图表ascii">GoAT 图表（Ascii）</a>
+      <ul>
+        <li><a href="#trees">Trees</a></li>
+        <li><a href="#overlaps">Overlaps</a></li>
+        <li><a href="#line-decorations">Line Decorations</a></li>
+        <li><a href="#line-ends">Line Ends</a></li>
+        <li><a href="#dot-grids">Dot Grids</a></li>
+        <li><a href="#large-nodes">Large Nodes</a></li>
+        <li><a href="#small-grids">Small Grids</a></li>
+        <li><a href="#big-grids">Big Grids</a></li>
+        <li><a href="#complicated">Complicated</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">个人杂记</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo/index.html"><span itemprop="name">Hugoes</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">hugo图表</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-source" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/hugo/hugo-%E5%9B%BE%E8%A1%A8/index.source.md" title="显示源代码"><i class="fa-fw fas fa-code"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-markdown" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/hugo/hugo-%E5%9B%BE%E8%A1%A8/index.md" title="显示 Markdown"><i class="fa-fw fab fa-markdown"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/hugo/hugo-%E5%9B%BE%E8%A1%A8/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/hugo/hugo-basic/index.html" title="hugo目录结构 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/hugo/hugo-code-images/index.html" title="图像 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable chapter" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="chapter narrow">
+  <header class="headline">
+  </header>
+<div class="article-subheading">第3章</div>
+
+<h1 id="hugo图表">hugo图表</h1>
+
+<h2 id="goat-图表ascii">GoAT 图表（Ascii）</h2>
+<p>Hugo 原生支持 <a href="https://github.com/bep/goat" rel="external" target="_blank">GoAT</a>。这意味着下面的代码块：</p>
+<h3 id="trees">Trees</h3>
+<p><a href="https://camo.githubusercontent.com/8c351a7c3557afe5235b4abc061a8bac42b1a6ccb228569e8df4951c88d1c488/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f74726565732e737667" rel="external" target="_blank"><a href="#R-image-13e6231ffdd8ba8a9bee26fa69b804e6" class="lightbox-link"><img alt="Trees Example" class="lazy lightbox figure-image" loading="lazy" src="https://camo.githubusercontent.com/8c351a7c3557afe5235b4abc061a8bac42b1a6ccb228569e8df4951c88d1c488/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f74726565732e737667" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-13e6231ffdd8ba8a9bee26fa69b804e6"><img alt="Trees Example" class="lazy lightbox lightbox-image" loading="lazy" src="https://camo.githubusercontent.com/8c351a7c3557afe5235b4abc061a8bac42b1a6ccb228569e8df4951c88d1c488/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f74726565732e737667"></a></a></p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>          .               .                .               .--- 1          .-- 1     / 1
+         / \              |                |           .---+            .-+         +
+        /   \         .---+---.         .--+--.        |   &#39;--- 2      |   &#39;-- 2   / \ 2
+       +     +        |       |        |       |    ---+            ---+          +
+      / \   / \     .-+-.   .-+-.     .+.     .+.      |   .--- 3      |   .-- 3   \ / 3
+     /   \ /   \    |   |   |   |    |   |   |   |     &#39;---+            &#39;-+         +
+     1   2 3   4    1   2   3   4    1   2   3   4         &#39;--- 4          &#39;-- 4     \ 4</code></pre></div>
+<h3 id="overlaps">Overlaps</h3>
+<p><a href="https://camo.githubusercontent.com/178e428a2f69cfb1a76708c7105cf62ac6da5084fdb262bed3e0791636d1c2db/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f6f7665726c6170732e737667" rel="external" target="_blank"><a href="#R-image-a2fcf50ac0c6b1f0e3e47c777fe8afd2" class="lightbox-link"><img alt="Overlaps Example" class="lazy lightbox figure-image" loading="lazy" src="https://camo.githubusercontent.com/178e428a2f69cfb1a76708c7105cf62ac6da5084fdb262bed3e0791636d1c2db/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f6f7665726c6170732e737667" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a2fcf50ac0c6b1f0e3e47c777fe8afd2"><img alt="Overlaps Example" class="lazy lightbox lightbox-image" loading="lazy" src="https://camo.githubusercontent.com/178e428a2f69cfb1a76708c7105cf62ac6da5084fdb262bed3e0791636d1c2db/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f6f7665726c6170732e737667"></a></a></p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>           .-.           .-.           .-.           .-.           .-.           .-.
+          |   |         |   |         |   |         |   |         |   |         |   |
+       .---------.   .--+---+--.   .--+---+--.   .--|   |--.   .--+   +--.   .------|--.
+      |           | |           | |   |   |   | |   |   |   | |           | |   |   |   |
+       &#39;---------&#39;   &#39;--+---+--&#39;   &#39;--+---+--&#39;   &#39;--|   |--&#39;   &#39;--+   +--&#39;   &#39;--|------&#39;
+          |   |         |   |         |   |         |   |         |   |         |   |
+           &#39;-&#39;           &#39;-&#39;           &#39;-&#39;           &#39;-&#39;           &#39;-&#39;           &#39;-&#39;</code></pre></div>
+<h3 id="line-decorations">Line Decorations</h3>
+<p><a href="https://camo.githubusercontent.com/f2d4c670a45fd4da9634e04b2c3838e7b7510758ba95ce0025349fcc7beb895b/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f6c696e652d6465636f726174696f6e732e737667" rel="external" target="_blank"><a href="#R-image-6ce785ab3c825552e423840f5cdc0fdf" class="lightbox-link"><img alt="Line Decorations Example" class="lazy lightbox figure-image" loading="lazy" src="https://camo.githubusercontent.com/f2d4c670a45fd4da9634e04b2c3838e7b7510758ba95ce0025349fcc7beb895b/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f6c696e652d6465636f726174696f6e732e737667" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6ce785ab3c825552e423840f5cdc0fdf"><img alt="Line Decorations Example" class="lazy lightbox lightbox-image" loading="lazy" src="https://camo.githubusercontent.com/f2d4c670a45fd4da9634e04b2c3838e7b7510758ba95ce0025349fcc7beb895b/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f6c696e652d6465636f726174696f6e732e737667"></a></a></p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>                ________                            o        *          *   .--------------.
+   *---+--.    |        |     o   o      |         ^          \        /   |  .----------.  |
+       |   |    &#39;--*   -+-    |   |      v        /            \      /    | |  &lt;------.  | |
+       |    &#39;-----&gt;       .---(---&#39;  ---&gt;*&lt;---   /      .+-&gt;*&lt;--o----&#39;     | |          | | |
+   &lt;--&#39;  ^  ^             |   |                 |      | |  ^    \         |  &#39;--------&#39;  | |
+          \/        *-----&#39;   o     |&lt;-----&gt;|   &#39;-----&#39;  |__|     v         &#39;------------&#39;  |
+          /\                                                               *---------------&#39;</code></pre></div>
+<h3 id="line-ends">Line Ends</h3>
+<p><a href="https://camo.githubusercontent.com/eb310c06510087ac72430c10ea5ae44c65046403bf9b9a41d03af784d8573d16/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f6c696e652d656e64732e737667" rel="external" target="_blank"><a href="#R-image-89a040cd6ed866ef67051bf83dfb9785" class="lightbox-link"><img alt="Line Ends Example" class="lazy lightbox figure-image" loading="lazy" src="https://camo.githubusercontent.com/eb310c06510087ac72430c10ea5ae44c65046403bf9b9a41d03af784d8573d16/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f6c696e652d656e64732e737667" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-89a040cd6ed866ef67051bf83dfb9785"><img alt="Line Ends Example" class="lazy lightbox lightbox-image" loading="lazy" src="https://camo.githubusercontent.com/eb310c06510087ac72430c10ea5ae44c65046403bf9b9a41d03af784d8573d16/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f6c696e652d656e64732e737667"></a></a></p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>   o--o    *--o     /  /   *  o  o o o o   * * * *   o o o o   * * * *      o o o o   * * * *
+   o--*    *--*    v  v   ^  ^   | | | |   | | | |    \ \ \ \   \ \ \ \    / / / /   / / / /
+   o--&gt;    *--&gt;   *  o   /  /    o * v &#39;   o * v &#39;     o * v \   o * v \  o * v /   o * v /
+   o---    *---
+                                 ^ ^ ^ ^   . . . .   ^ ^ ^ ^   \ \ \ \      ^ ^ ^ ^   / / / /
+   |  |   *  o  \  \   *  o      | | | |   | | | |    \ \ \ \   \ \ \ \    / / / /   / / / /
+   v  v   ^  ^   v  v   ^  ^     o * v &#39;   o * v &#39;     o * v \   o * v \  o * v /   o * v /
+   *  o   |  |    *  o   \  \
+
+   &lt;--o   &lt;--*   &lt;--&gt;   &lt;---      ---o   ---*   ---&gt;   ----      *&lt;--   o&lt;--   --&gt;o   --&gt;*</code></pre></div>
+<h3 id="dot-grids">Dot Grids</h3>
+<p><a href="https://camo.githubusercontent.com/732c4a114c05a8a81606d6210f2723dd1173ba3cf4496d6b6691ef404789e5a2/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f646f742d67726964732e737667" rel="external" target="_blank"><a href="#R-image-55b217a81a44c3a1b1bf6f49fb375c00" class="lightbox-link"><img alt="Dot Grids Example" class="lazy lightbox figure-image" loading="lazy" src="https://camo.githubusercontent.com/732c4a114c05a8a81606d6210f2723dd1173ba3cf4496d6b6691ef404789e5a2/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f646f742d67726964732e737667" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-55b217a81a44c3a1b1bf6f49fb375c00"><img alt="Dot Grids Example" class="lazy lightbox lightbox-image" loading="lazy" src="https://camo.githubusercontent.com/732c4a114c05a8a81606d6210f2723dd1173ba3cf4496d6b6691ef404789e5a2/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f646f742d67726964732e737667"></a></a></p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>  o o o o o  * * * * *  * * o o *    o o o      * * *      o o o     · * · · ·     · · ·
+  o o o o o  * * * * *  o o o o *   o o o o    * * * *    * o * *    · * * · ·    · · · ·
+  o o o o o  * * * * *  o * o o o  o o o o o  * * * * *  o o o o o   · o · · o   · · * * ·
+  o o o o o  * * * * *  o * o o o   o o o o    * * * *    o * o o    · · · · o    · · * ·
+  o o o o o  * * * * *  * * * * o    o o o      * * *      o * o     · · · · ·     · · *</code></pre></div>
+<h3 id="large-nodes">Large Nodes</h3>
+<p><a href="https://camo.githubusercontent.com/f5103a526dc736fe89b236c910e72275d28abaaa3685c187007ff0f426f01797/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f6c617267652d6e6f6465732e737667" rel="external" target="_blank"><a href="#R-image-abb60dd66e56b93a0a7d35ba9fa5e186" class="lightbox-link"><img alt="Large Node Example" class="lazy lightbox figure-image" loading="lazy" src="https://camo.githubusercontent.com/f5103a526dc736fe89b236c910e72275d28abaaa3685c187007ff0f426f01797/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f6c617267652d6e6f6465732e737667" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-abb60dd66e56b93a0a7d35ba9fa5e186"><img alt="Large Node Example" class="lazy lightbox lightbox-image" loading="lazy" src="https://camo.githubusercontent.com/f5103a526dc736fe89b236c910e72275d28abaaa3685c187007ff0f426f01797/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f6c617267652d6e6f6465732e737667"></a></a></p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>   .---.       .-.        .-.       .-.                                       .-.
+   | A +-----&gt;| 1 +&lt;----&gt;| 2 |&lt;----+ 4 +------------------.                  | 8 |
+   &#39;---&#39;       &#39;-&#39;        &#39;+&#39;       &#39;-&#39;                    |                  &#39;-&#39;
+                           |         ^                     |                   ^
+                           v         |                     v                   |
+                          .-.      .-+-.        .-.      .-+-.      .-.       .+.       .---.
+                         | 3 +----&gt;| B |&lt;-----&gt;| 5 +----&gt;| C +----&gt;| 6 +----&gt;| 7 |&lt;----&gt;| D |
+                          &#39;-&#39;      &#39;---&#39;        &#39;-&#39;      &#39;---&#39;      &#39;-&#39;       &#39;-&#39;       &#39;---&#39;</code></pre></div>
+<h3 id="small-grids">Small Grids</h3>
+<p><a href="https://camo.githubusercontent.com/6f2da4f51b29f7380eff1ac6197ddd50cf0d11c745a8c9a1bb15fbb4afa8bc53/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f736d616c6c2d67726964732e737667" rel="external" target="_blank"><a href="#R-image-72d905688a65dbbf44666c2c5ce7b6f0" class="lightbox-link"><img alt="Small Grids Example" class="lazy lightbox figure-image" loading="lazy" src="https://camo.githubusercontent.com/6f2da4f51b29f7380eff1ac6197ddd50cf0d11c745a8c9a1bb15fbb4afa8bc53/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f736d616c6c2d67726964732e737667" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-72d905688a65dbbf44666c2c5ce7b6f0"><img alt="Small Grids Example" class="lazy lightbox lightbox-image" loading="lazy" src="https://camo.githubusercontent.com/6f2da4f51b29f7380eff1ac6197ddd50cf0d11c745a8c9a1bb15fbb4afa8bc53/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f736d616c6c2d67726964732e737667"></a></a></p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>       ___     ___      .---+---+---+---+---.     .---+---+---+---.  .---.   .---.
+   ___/   \___/   \     |   |   |   |   |   |    / \ / \ / \ / \ /   |   +---+   |
+  /   \___/   \___/     +---+---+---+---+---+   +---+---+---+---+    +---+   +---+
+  \___/ b \___/   \     |   |   | b |   |   |    \ / \a/ \b/ \ / \   |   +---+   |
+  / a \___/   \___/     +---+---+---+---+---+     +---+---+---+---+  +---+ b +---+
+  \___/   \___/   \     |   | a |   |   |   |    / \ / \ / \ / \ /   | a +---+   |
+      \___/   \___/     &#39;---+---+---+---+---&#39;   &#39;---+---+---+---&#39;    &#39;---&#39;   &#39;---&#39;</code></pre></div>
+<h3 id="big-grids">Big Grids</h3>
+<p><a href="https://camo.githubusercontent.com/e20d8624aeb49931a96278854b5ae46fca414977d699ca01cc28e4e4efc07bc7/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f6269672d67726964732e737667" rel="external" target="_blank"><a href="#R-image-4241bad3c21a1d424ccf1621b7d091b0" class="lightbox-link"><img alt="Big Grids Example" class="lazy lightbox figure-image" loading="lazy" src="https://camo.githubusercontent.com/e20d8624aeb49931a96278854b5ae46fca414977d699ca01cc28e4e4efc07bc7/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f6269672d67726964732e737667" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4241bad3c21a1d424ccf1621b7d091b0"><img alt="Big Grids Example" class="lazy lightbox lightbox-image" loading="lazy" src="https://camo.githubusercontent.com/e20d8624aeb49931a96278854b5ae46fca414977d699ca01cc28e4e4efc07bc7/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f6269672d67726964732e737667"></a></a></p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>    .----.        .----.
+   /      \      /      \            .-----+-----+-----.
+  +        +----+        +----.      |     |     |     |          .-----+-----+-----+-----+
+   \      /      \      /      \     |     |     |     |         /     /     /     /     /
+    +----+   B    +----+        +    +-----+-----+-----+        +-----+-----+-----+-----+
+   /      \      /      \      /     |     |     |     |       /     /     /     /     /
+  +   A    +----+        +----+      |     |  B  |     |      +-----+-----+-----+-----+
+   \      /      \      /      \     +-----+-----+-----+     /     /  A  /  B  /     /
+    &#39;----+        +----+        +    |     |     |     |    +-----+-----+-----+-----+
+          \      /      \      /     |  A  |     |     |   /     /     /     /     /
+           &#39;----&#39;        &#39;----&#39;      &#39;-----+-----+-----&#39;  &#39;-----+-----+-----+-----+</code></pre></div>
+<h3 id="complicated">Complicated</h3>
+<p><a href="https://camo.githubusercontent.com/b264dda2fbfcc991cc6fdefdae4ea4e630213e9767f7a0d6ead0cc7a29343217/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f636f6d706c6963617465642e737667" rel="external" target="_blank"><a href="#R-image-e37c25da3a03bd109701c608432cbc66" class="lightbox-link"><img alt="Complicated Example" class="lazy lightbox figure-image" loading="lazy" src="https://camo.githubusercontent.com/b264dda2fbfcc991cc6fdefdae4ea4e630213e9767f7a0d6ead0cc7a29343217/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f636f6d706c6963617465642e737667" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e37c25da3a03bd109701c608432cbc66"><img alt="Complicated Example" class="lazy lightbox lightbox-image" loading="lazy" src="https://camo.githubusercontent.com/b264dda2fbfcc991cc6fdefdae4ea4e630213e9767f7a0d6ead0cc7a29343217/68747470733a2f2f63646e2e7261776769742e636f6d2f6265702f676f61742f6d61737465722f6578616d706c65732f636f6d706c6963617465642e737667"></a></a></p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>+-------------------+                           ^                      .---.
+|    A Box          |__.--.__    __.--&gt;         |      .-.             |   |
+|                   |        &#39;--&#39;               v     | * |&lt;---        |   |
++-------------------+                                  &#39;-&#39;             |   |
+                       Round                                       *---(-. |
+  .-----------------.  .-------.    .----------.         .-------.     | | |
+ |   Mixed Rounded  | |         |  / Diagonals  \        |   |   |     | | |
+ | &amp; Square Corners |  &#39;--. .--&#39;  /              \       |---+---|     &#39;-)-&#39;       .--------.
+ &#39;--+------------+-&#39;  .--. |     &#39;-------+--------&#39;      |   |   |       |        / Search /
+    |            |   |    | &#39;---.        |               &#39;-------&#39;       |       &#39;-+------&#39;
+    |&lt;----------&gt;|   |    |      |       v                Interior                 |     ^
+    &#39;           &lt;---&#39;      &#39;----&#39;   .-----------.              ---.     .---       v     |
+ .------------------.  Diag line    | .-------. +---.              \   /           .     |
+ |   if (a &gt; b)     +---.      .---&gt;| |       | |    | Curved line  \ /           / \    |
+ |   obj-&gt;fcn()     |    \    /     | &#39;-------&#39; |&lt;--&#39;                +           /   \   |
+ &#39;------------------&#39;     &#39;--&#39;      &#39;--+--------&#39;      .--. .--.     |  .-.     +Done?+-&#39;
+    .---+-----.                        |   ^           |\ | | /|  .--+ |   |     \   /
+    |   |     | Join        \|/        |   | Curved    | \| |/ | |    \    |      \ /
+    |   |     +----&gt;  o    --o--        &#39;-&#39;  Vertical  &#39;--&#39; &#39;--&#39;  &#39;--  &#39;--&#39;        +  .---.
+ &lt;--+---+-----&#39;       |     /|\                                                    |  | 3 |
+                      v                             not:line    &#39;quotes&#39;        .-&#39;   &#39;---&#39;
+  .-.             .---+--------.            /            A || B   *bold*       |        ^
+ |   |           |   Not a dot  |      &lt;---+---&lt;--    A dash--is not a line    v        |
+  &#39;-&#39;             &#39;---------+--&#39;          /           Nor/is this.            ---</code></pre></div>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+          <a id="R-logo" class="R-default" href="/index.html">
+            <div class="logo-title">个人杂记</div>
+          </a>
+        </div>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="搜索 (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">搜索</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="搜索...">
+            <button class="search-clear" type="button" data-search-clear="" title="清除搜索"><i class="fas fa-times" title="清除搜索"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/index.html"><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/about/index.html"><a class="padding" href="/about/index.html">第一篇文章<i class="fa-fw fas fa-check read-icon"></i></a></li>
+            <li class="parent " data-nav-id="/hugo/index.html"><a class="padding" href="/hugo/index.html">Hugoes<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-deefdfb1bf287f4e1b98b48eb2a674a4" class="collapsible-menu">
+            <li class="" data-nav-id="/hugo/hugo/index.html"><a class="padding" href="/hugo/hugo/index.html">hugo<i class="fa-fw fas fa-check read-icon"></i></a></li>
+            <li class="" data-nav-id="/hugo/hugo-basic/index.html"><a class="padding" href="/hugo/hugo-basic/index.html">hugo目录结构<i class="fa-fw fas fa-check read-icon"></i></a></li>
+            <li class="active " data-nav-id="/hugo/hugo-%E5%9B%BE%E8%A1%A8/index.html"><a class="padding" href="/hugo/hugo-%E5%9B%BE%E8%A1%A8/index.html">hugo图表<i class="fa-fw fas fa-check read-icon"></i></a></li>
+            <li class="" data-nav-id="/hugo/hugo-code-images/index.html"><a class="padding" href="/hugo/hugo-code-images/index.html">图像<i class="fa-fw fas fa-check read-icon"></i></a></li></ul></li>
+            <li class="" data-nav-id="/md/index.html"><a class="padding" href="/md/index.html">Mds<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-356958daa34bfee934a293d95d9578df" class="collapsible-menu"></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+			<li class="R-languageswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-language"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-language">语言</label>
+                  <select id="R-select-language">
+                    <option id="R-select-language-zh-cn" value="zh-cn" data-url="/hugo/hugo-%E5%9B%BE%E8%A1%A8/index.html" lang="zh-cn" selected data-selected>中文</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </li>
+            <li class="R-variantswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-paint-brush"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-variant">主题</label>
+                  <select id="R-select-variant">
+                    <option id="R-select-variant-relearn-light" value="relearn-light" selected>Relearn Light</option>
+                    <option id="R-select-variant-relearn-dark" value="relearn-dark">Relearn Dark</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <script>window.relearn.markVariant();</script>
+            </li>
+            <li class="R-historyclearer">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-history"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <button>清理历史记录</button>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/clipboard/clipboard.min.js?1752035216" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1752035216" defer></script>
+    <script src="/js/theme.min.js?1752035216" defer></script>
+  </body>
+</html>

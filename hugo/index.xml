@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugoes | 个人杂记</title>
+    <link>https://qukato.github.io/hugo/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="https://qukato.github.io/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hugo</title>
+      <link>https://qukato.github.io/hugo/hugo/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://qukato.github.io/hugo/hugo/index.html</guid>
+      <description>显示可用命令 要查看可用命令和标志的列表：&#xA;hugo help 要构建站点，请进入项目目录并运行以下命令：&#xA;hugo 开发和测试站点 要在开发布局或创建内容时查看站点，请进入项目目录并运行以下命令：&#xA;hugo server 自动重定向 在编辑内容时，如果你希望浏览器自动重定向到最后修改的页面，请运行以下命令：&#xA;hugo server --navigateToChanged 在创建新站点时，Hugo 会生成一个项目骨架。例如，以下命令：&#xA;hugo new site my-site 内容管理</description>
+    </item>
+    <item>
+      <title>hugo目录结构</title>
+      <link>https://qukato.github.io/hugo/hugo-basic/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://qukato.github.io/hugo/hugo-basic/index.html</guid>
+      <description>目录 每个子目录都贡献于站点的内容、结构、行为或呈现。&#xA;archetypes&#xA;archetypes 目录包含用于新内容的模板。详见 详情.&#xA;assets&#xA;assets 目录包含通常通过资源管道传递的全局资源。包括图片、CSS、Sass、JavaScript 和 TypeScript 等资源。详见 详情.&#xA;config&#xA;config 目录包含站点配置，可能分为多个子目录和文件。对于配置较少或不需要在不同环境中以不同方式运行的项目，项目根目录中的单个 hugo.toml 配置文件就足够了。详见 详情。&#xA;content&#xA;content 目录包含组成站点内容的标记文件（通常是 markdown）和页面资源。详见 详情.&#xA;data&#xA;data 目录包含用于增强内容、配置、本地化和导航的数据文件（JSON、TOML、YAML 或 XML）。详见 详情.&#xA;i18n&#xA;i18n 目录包含多语言站点的翻译表。详见 详情.&#xA;layouts&#xA;layouts 目录包含将内容、数据和资源转换为完整网站的模板。详见 详情.&#xA;public&#xA;public 目录包含发布的网站，在运行 hugo 命令时生成。Hugo 根据需要重建此目录及其内容。详见 详情.&#xA;resources&#xA;resources 目录包含 Hugo 资源管道的缓存输出，在运行 hugo 或 hugo server 命令时生成。默认情况下，此缓存目录包括 CSS 和图片。Hugo 根据需要重建此目录及其内容。&#xA;static&#xA;static 目录包含在构建站点时将复制到 public 目录的文件，例如 favicon.ico、robots.txt 和用于验证站点拥有权的文件。在引入 页面包 和 资源管道 之前，static 目录也用于存放图片、CSS 和 JavaScript 等资源。详见 详情.&#xA;themes&#xA;themes 目录包含一个或多个主题，每个主题位于自己的子目录中。&#xA;联合文件系统 Hugo 创建了一个联合文件系统，允许将两个或多个目录挂载到同一位置。例如，假设您的主目录包含一个 Hugo 项目的目录，另一个目录包含共享内容：</description>
+    </item>
+    <item>
+      <title>hugo图表</title>
+      <link>https://qukato.github.io/hugo/hugo-%E5%9B%BE%E8%A1%A8/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://qukato.github.io/hugo/hugo-%E5%9B%BE%E8%A1%A8/index.html</guid>
+      <description>GoAT 图表（Ascii） Hugo 原生支持 GoAT。这意味着下面的代码块：&#xA;Trees . . . .--- 1 .-- 1 / 1 / \ | | .---+ .-+ + / \ .---+---. .--+--. | &#39;--- 2 | &#39;-- 2 / \ 2 + + | | | | ---+ ---+ + / \ / \ .-+-. .-+-. .+. .+. | .--- 3 | .-- 3 \ / 3 / \ / \ | | | | | | | | &#39;---+ &#39;-+ + 1 2 3 4 1 2 3 4 1 2 3 4 &#39;--- 4 &#39;-- 4 \ 4 Overlaps</description>
+    </item>
+    <item>
+      <title>图像</title>
+      <link>https://qukato.github.io/hugo/hugo-code-images/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://qukato.github.io/hugo/hugo-code-images/index.html</guid>
+      <description>图像资源 要处理图像，您必须以页面资源、全局资源或远程资源的形式访问文件。&#xA;页面资源 页面资源是页面束（page bundle）中的文件。页面束是一个具有根目录下的 index.md 或 _index.md 文件的目录。&#xA;content/ └── posts/ └── post-1/ &lt;-- 页面束 ├── index.md └── sunset.jpg &lt;-- 页面资源 要以页面资源的形式访问图像：&#xA;{{ $image := .Resources.Get &#34;sunset.jpg&#34; }} 全局资源 全局资源是位于 assets 目录中或装载到 assets 目录中任意目录中的文件。&#xA;assets/ └── images/ └── sunset.jpg &lt;-- 全局资源 要以全局资源的形式访问图像：&#xA;{{ $image := resources.Get &#34;images/sunset.jpg&#34; }} 远程资源 远程资源是可通过 HTTP 或 HTTPS 访问的远程服务器上的文件。要以远程资源的形式访问图像：&#xA;{{ $image := resources.GetRemote &#34;https://gohugo.io/img/hugo-logo.png&#34; }} 图像渲染 一旦您访问了页面资源或全局资源中的图像，可以在模板中使用 Permalink、RelPermalink、Width 和 Height 属性来渲染图像。&#xA;示例 1：如果未找到资源，则抛出错误。&#xA;{{ $image := .Resources.GetMatch &#34;sunset.jpg&#34; }} &lt;img src=&#34;{{ $image.RelPermalink }}&#34; width=&#34;{{ $image.Width }}&#34; height=&#34;{{ $image.Height }}&#34;&gt; 示例 2：如果未找到资源，则跳过图像渲染。&#xA;{{ $image := .Resources.GetMatch &#34;sunset.jpg&#34; }} {{ with $image }} &lt;img src=&#34;{{ .RelPermalink }}&#34; width=&#34;{{ .Width }}&#34; height=&#34;{{ .Height }}&#34;&gt; {{ end }} 示例 3：另一种简洁的方式，如果未找到资源，则跳过图像渲染。</description>
+    </item>
+  </channel>
+</rss>
