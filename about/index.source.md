@@ -20,4 +20,4 @@ weight = 1
 果然写不了多少呢  
 2025年7月20日
 
-[附件](Camera.tar.gz "之前写的")
+[附件](static/Camera.tar.gz "之前写的")
