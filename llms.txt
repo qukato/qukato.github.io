@@ -1,0 +1,9 @@
+﻿# 个人杂记
+> 个人杂记：记录折腾工具与技术过程中的笔记和杂想。
+
+## Key Pages
+- [主页](https://qukato.github.io/)
+- [归档](https://qukato.github.io/archive/)
+- [我的](https://qukato.github.io/about/)
+
+## Recent Posts

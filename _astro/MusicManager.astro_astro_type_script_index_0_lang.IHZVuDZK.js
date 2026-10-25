@@ -1,0 +1,1 @@
+import{t as o}from"./preload-helper.BKYioxU4.js";var i=null;function r(n){return i||(i=o(()=>import("./midiMusicEngine.8xWRttJc.js").then(e=>new e.MidiMusicEngine(n)),[]),i.catch(()=>{i=null})),i}window.__fireflyMusicLoadEngine=r;

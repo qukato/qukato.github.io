@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://qukato.github.io/</id>
+  <title type="text">个人杂记</title>
+  <subtitle type="text">记录折腾与思考</subtitle>
+  <updated>2026-10-25T15:20:38.818Z</updated>
+  <author><name>qukato</name></author>
+  <link rel="alternate" href="https://qukato.github.io/"/>
+  <link rel="self" href="https://qukato.github.io/atom.xml"/>
+  <generator uri="https://github.com/CuteLeaf/Firefly">Firefly v6.16.8</generator>
+
+</feed>
